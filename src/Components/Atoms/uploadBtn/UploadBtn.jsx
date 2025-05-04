@@ -1,4 +1,4 @@
-import './uploadBtn.css'
+import './UploadBtn.css'
 const UploadBtn = () => {
     return (
         <button className='uploadBtn'>
