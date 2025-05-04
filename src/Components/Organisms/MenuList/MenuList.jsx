@@ -2,7 +2,7 @@ import MenuListBtn from "../../Moleculs/MenuListBtn/MenuListBtn"
 import MenuListWindow from "../../Moleculs/MenuListWindow/MenuListWindow"
 
 const MenuList = (props) => {
-    const { handleClick,musicPlayList,active,setActive } = props
+    const { handleClick,musicPlayList,active } = props
     return (
         <>
             <MenuListBtn func={handleClick} />

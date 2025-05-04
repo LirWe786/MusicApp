@@ -17,7 +17,7 @@ const [active,setActive]=useState(false)
   useEffect(() => {
 
     const audio = ref.current;
-    const updateDuration = (event) => {
+    const updateDuration = () => {
       setDuration(ref.current.duration);
     }
     console.log(index)

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../../context/Context";
 import MenuListInput from "../../Atoms/MenuListInput/MenuListInput";
-const MenuListWindow = (props) => {
+const MenuListWindow = () => {
 
 
     const { musicList } = useContext(AppContext);
@@ -25,7 +25,7 @@ const MenuListWindow = (props) => {
     return (
         <div className="menu-list-window">
             <input type="text" onInput={(e) => {
-                setInpValue(prev => e.target.value)
+                setInpValue(e.target.value)
                 liveSearch()
             }} />
             {platList.map((track) => {

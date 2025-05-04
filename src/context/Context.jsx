@@ -14,7 +14,7 @@ const  AppProvider = ({ children }) => {
 
 
     return (
-        <AppContext.Provider value={{ musicList, play, index, value, setPlay, setIndex}}>
+        <AppContext.Provider value={{ musicList, play, index, value, setPlay, setIndex , setMusicList , setValue}}>
             {children}
         </AppContext.Provider>
     )
