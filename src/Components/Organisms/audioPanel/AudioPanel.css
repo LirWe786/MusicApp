@@ -1,0 +1,32 @@
+
+.audio-panel {
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    background:linear-gradient(120deg, rgb(31, 31, 31), black);
+    bottom: 5%;
+    left: calc(50% - 125px);
+    border: 1px solid rgb(49, 49, 49);
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    & button {
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+.audio-panel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.audio-panel-progress {
+    width: 100%;
+    height: 3px;
+}
+.audio-panel-progress-percent {
+    width: 5%;
+    height: 100%;
+    background: cyan;
+}

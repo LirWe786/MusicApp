@@ -1,0 +1,138 @@
+:root {
+    --background: rgb(8, 8, 8);
+    --foreground: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body,
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--background);
+}
+
+header {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-view {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.design-container {
+    position: absolute;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+
+
+}
+
+.design-item {
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    border-radius: 170px 50px 40px 90px;
+    position: absolute;
+    animation: morph 15s infinite linear;
+    filter: blur(30px);
+}
+
+.controls-panel {
+    z-index: 10;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menuListBtn {
+    width: 200px;
+    height: 100px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    z-index: 10;
+    top: 85%;
+    left: 8%;
+    background: none;
+    width: 300px;
+}
+
+.menu-list-window {
+    position: absolute;
+    z-index: 10;
+    width: 20vw;
+    height: 60vh;
+    top: 25vh;
+    left: calc(50vw - 10vw);
+    background-color: rgb(4, 4, 4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    color: white;
+
+    & .menu-list-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 2px solid rgb(68, 68, 68);
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+
+        & img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 70% 30% / 30% 70% 60% 40%;
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        border-radius: 60% 40% 50% 50% / 50% 60% 40% 60%;
+        transform: translate(-50px, 20px) scale(1.1);
+    }
+
+    50% {
+        border-radius: 50% 50% 60% 40% / 60% 50% 40% 50%;
+        transform: translate(50px, -30px) scale(1.2);
+    }
+
+    70% {
+        border-radius: 70% 30% 40% 60% / 40% 60% 30% 70%;
+        transform: translate(-20px, -50px) scale(1.1);
+    }
+
+    100% {
+        border-radius: 40% 60% 70% 30% / 30% 70% 60% 40%;
+        transform: translate(0, 0) scale(1);
+    }
+}

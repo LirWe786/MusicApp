@@ -1,0 +1,21 @@
+{
+    "short_name": "MyAPP",
+    "name": "YAndex Music App",
+    "icons": [
+      {
+        "src": "/icons/logo.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/logoX96.png",
+        "sizes": "196x196",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  
